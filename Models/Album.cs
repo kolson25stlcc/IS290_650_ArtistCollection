@@ -19,7 +19,7 @@ namespace ArtistCollection.Models
 
         //[Required(ErrorMessage ="Year is required.")]
         [AllowNull]
-        public int Year { get; set; }
+        public int? Year { get; set; }
 
         //[Required(ErrorMessage="Genre is required.")]
         [AllowNull]
