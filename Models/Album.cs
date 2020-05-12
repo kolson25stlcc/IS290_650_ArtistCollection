@@ -27,7 +27,7 @@ namespace ArtistCollection.Models
 
 
         public ICollection<Album_Songs>  Album_Songs { get; set; }
-        public ICollection<Artist_Song_Collection> Artist_Song_Collection { get; set; }
+        public ICollection<Artist_Song_Collection> Artist_Song_Collections { get; set; }
 
 
 
