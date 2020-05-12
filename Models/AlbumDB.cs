@@ -152,7 +152,7 @@ namespace ArtistCollection.Models
                           "set album_name = @album_name " + Environment.NewLine + "," +
                           "    year =  @year  " + Environment.NewLine + "," +
                           "    genre = @genre" +
-                          "where id = @id ";
+                          "where album_id = @album_id ";
                     using (cmd = new SqlCommand(sql, db))
                     {
                         cmd.Parameters.AddWithValue("@ablum_name", objModel.AlbumName);
