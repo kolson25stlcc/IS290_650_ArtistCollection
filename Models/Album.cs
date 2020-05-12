@@ -26,6 +26,11 @@ namespace ArtistCollection.Models
         public string Genre { get; set; }
 
 
+        public ICollection<Album_Songs>  Album_Songs { get; set; }
+        public ICollection<Artist_Song_Collection> Artist_Song_Collection { get; set; }
+
+
+
 
 
     }
