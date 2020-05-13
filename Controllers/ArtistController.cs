@@ -9,15 +9,19 @@ using ArtistCollection.Models;
 
 namespace ArtistCollection.Controllers
 {
-    public class HomeController : Controller
+    public class ArtistController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<ArtistController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public ArtistController(ILogger<ArtistController> logger)
         {
             _logger = logger;
         }
 
+        // public ArtistController()
+        // {
+        //
+        /// }
         public IActionResult Index()
         {
             // 1. *************RETRIEVE ALL NAMES DETAILS ******************

@@ -22,11 +22,11 @@ namespace ArtistCollection.Models
         [Required(ErrorMessage = "Artist's last name is required.")]
         public string ArtistLastName { get; set; }
 
-        [Display(Name = "The yeear the artist was born")]
+        [Display(Name = "Year Born")]
         [Required(ErrorMessage = "The year the artist was born is required.")]
         public int YearBorn { get; set; }
 
-        [Display(Name = "The year the artist Died")]
+        [Display(Name = "Year Died")]
         [Required(ErrorMessage = "The year the artist died is required. ")]
         public int? YearDied { get; set; }
 

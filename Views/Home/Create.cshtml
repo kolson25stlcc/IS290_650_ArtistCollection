@@ -1,4 +1,4 @@
-﻿@model ArtistCollection.Models.Album
+﻿@model ArtistCollection.Models.Artist
 
 <h4>Create</h4>
 <hr />
@@ -7,24 +7,74 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="AlbumID" class="control-label"></label>
-                <input asp-for="AlbumID" class="form-control" />
-                <span asp-validation-for="AlbumID" class="text-danger"></span>
+                <label asp-for="ArtistID" class="control-label"></label>
+                <input asp-for="ArtistID" class="form-control" />
+                <span asp-validation-for="ArtistID" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="AlbumName" class="control-label"></label>
-                <input asp-for="AlbumName" class="form-control" />
-                <span asp-validation-for="AlbumName" class="text-danger"></span>
+                <label asp-for="ArtistFirstName" class="control-label"></label>
+                <input asp-for="ArtistFirstName" class="form-control" />
+                <span asp-validation-for="ArtistFirstName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Year" class="control-label"></label>
-                <input asp-for="Year" class="form-control" />
-                <span asp-validation-for="Year" class="text-danger"></span>
+                <label asp-for="ArtistLastName" class="control-label"></label>
+                <input asp-for="ArtistLastName" class="form-control" />
+                <span asp-validation-for="ArtistLastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YearBorn" class="control-label"></label>
+                <input asp-for="YearBorn" class="form-control" />
+                <span asp-validation-for="YearBorn" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YearDied" class="control-label"></label>
+                <input asp-for="YearDied" class="form-control" />
+                <span asp-validation-for="YearDied" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YearsActive" class="control-label"></label>
+                <input asp-for="YearsActive" class="form-control" />
+                <span asp-validation-for="YearsActive" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Occupation" class="control-label"></label>
+                <input asp-for="Occupation" class="form-control" />
+                <span asp-validation-for="Occupation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NetWorth" class="control-label"></label>
+                <input asp-for="NetWorth" class="form-control" />
+                <span asp-validation-for="NetWorth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hometown" class="control-label"></label>
+                <input asp-for="Hometown" class="form-control" />
+                <span asp-validation-for="Hometown" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Genre" class="control-label"></label>
                 <input asp-for="Genre" class="form-control" />
                 <span asp-validation-for="Genre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Awards" class="control-label"></label>
+                <input asp-for="Awards" class="form-control" />
+                <span asp-validation-for="Awards" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Instruments" class="control-label"></label>
+                <input asp-for="Instruments" class="form-control" />
+                <span asp-validation-for="Instruments" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Label" class="control-label"></label>
+                <input asp-for="Label" class="form-control" />
+                <span asp-validation-for="Label" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Photo" class="control-label"></label>
+                <input asp-for="Photo" class="form-control" />
+                <span asp-validation-for="Photo" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

@@ -1,7 +1,7 @@
 ﻿@model ArtistCollection.Models.Album
 
 @{
-    ViewData["Title"] = "Detail";
+    ViewData["Title"] = "SHowDelete";
 }
 
 <!DOCTYPE html>
@@ -44,7 +44,7 @@
         </dl>
     </div>
     <div>
-        @Html.ActionLink("Edit", "Edit", new { AlbumID = Model.AlbumID }) |
+        @Html.ActionLink("Delete", "Delete", new { AlbumID = Model.AlbumID }) |
         <a asp-action="Index">Back to List</a>
     </div>
 </body>

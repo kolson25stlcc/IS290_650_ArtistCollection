@@ -30,7 +30,12 @@
         <thead>
             <tr>
                 <th>
-                    @Html.DisplayNameFor(model => model.ArtistID)
+                    @Html.DisplayNameFor(model => model.Photo)
+                </th>
+                <th>
+                    <div style="display:none">
+                        @Html.DisplayNameFor(model => model.ArtistID)
+                    </div>
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.ArtistFirstName)
@@ -68,9 +73,7 @@
                 <th>
                     @Html.DisplayNameFor(model => model.Label)
                 </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Photo)
-                </th>
+                
                 <th></th>
             </tr>
         </thead>
@@ -79,7 +82,13 @@
             {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.ArtistID)
+                    @Html.DisplayFor(modelItem => item.Photo)
+                </td>
+                <td>
+                    <div style="display:none">
+                        @Html.DisplayFor(modelItem => item.ArtistID)
+                    </div>
+                   
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.ArtistFirstName)
@@ -117,9 +126,7 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Label)
                 </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Photo)
-                </td>
+                
                 <td>
                     @Html.ActionLink("Edit", "Edit", new { artist_id = item.ArtistID }) |
                     @Html.ActionLink("Detail", "Detail", new { artist_id = item.ArtistID }) |
