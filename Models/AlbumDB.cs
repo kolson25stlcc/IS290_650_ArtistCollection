@@ -39,7 +39,7 @@ namespace ArtistCollection.Models
                                 Album objTmp = new Album();
                                 objTmp.AlbumID = Convert.ToInt16(dr["album_id"].ToString());
                                 objTmp.AlbumName = dr["album_name"].ToString();
-                                objTmp.Year = Convert.ToInt16(dr["year"].ToString());
+                                objTmp.Year = Convert.ToInt16(Convert.IsDBNull(dr["year"].ToString()));
                                 objTmp.Genre = dr["genre"].ToString();
 
                                 albumList.Add(objTmp);
@@ -82,7 +82,7 @@ namespace ArtistCollection.Models
                                 objTemp = new Album();
                                 objTemp.AlbumID = Convert.ToInt16(dr["album_id"].ToString());
                                 objTemp.AlbumName = dr["album_name"].ToString();
-                                objTemp.Year = Convert.ToInt16(dr["year"].ToString());
+                                objTemp.Year = Convert.ToInt16(Convert.IsDBNull(dr["year"].ToString()));
                                 objTemp.Genre = dr["genre"].ToString();
                             }
                         }
@@ -113,7 +113,7 @@ namespace ArtistCollection.Models
                     {
                         cmd.Parameters.AddWithValue("@album_id", objModel.AlbumID);
                         cmd.Parameters.AddWithValue("@album_name", objModel.AlbumName);
-                        cmd.Parameters.AddWithValue("@year", objModel.Year );
+                        cmd.Parameters.AddWithValue("@year", objModel.Year ?? Convert.DBNull);
                         cmd.Parameters.AddWithValue("@genre", objModel.Genre ?? Convert.DBNull);
 
                         rowsAffected = cmd.ExecuteNonQuery();
@@ -150,13 +150,13 @@ namespace ArtistCollection.Models
                     db.Open();
                     sql = "UPDATE Album " + Environment.NewLine +
                           "set album_name = @album_name " + Environment.NewLine + "," +
-                          "     year =  @year " + Environment.NewLine + "," +
-                          "     genre = @genre  " + Environment.NewLine + 
+                          "    year =  @year  " + Environment.NewLine + "," +
+                          "    genre = @genre" +
                           "where album_id = @album_id ";
                     using (cmd = new SqlCommand(sql, db))
                     {
-                        cmd.Parameters.AddWithValue("@album_name", objModel.AlbumName);
-                        cmd.Parameters.AddWithValue("@year", objModel.Year );
+                        cmd.Parameters.AddWithValue("@ablum_name", objModel.AlbumName);
+                        cmd.Parameters.AddWithValue("@year", objModel.Year ?? Convert.DBNull);
                         cmd.Parameters.AddWithValue("@genre", objModel.Genre ?? Convert.DBNull);
                         cmd.Parameters.AddWithValue("@album_id", objModel.AlbumID);
 

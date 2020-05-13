@@ -95,10 +95,10 @@ namespace ArtistCollection.Controllers
         // 3. ************* EDIT NAME DETAILS ******************
         // GET: Name/Edit/3
 
-        public IActionResult Edit(int album_id)
+        public IActionResult Edit(int id)
         {
             Album objTest = new Album();
-            objTest = AlbumDB.GetAlbum(album_id);
+            objTest = AlbumDB.GetAlbum(id);
             return View(objTest);
         }
 

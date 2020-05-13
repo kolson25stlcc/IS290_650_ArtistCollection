@@ -18,8 +18,9 @@ namespace ArtistCollection.Models
         [Required(ErrorMessage = "Album Name is required.")]
         public string AlbumName { get; set; }
 
-        [Required(ErrorMessage ="Year is required.")]
-        public int Year { get; set; }
+        //[Required(ErrorMessage ="Year is required.")]
+        [AllowNull]
+        public int? Year { get; set; }
 
         //[Required(ErrorMessage="Genre is required.")]
         [AllowNull]
