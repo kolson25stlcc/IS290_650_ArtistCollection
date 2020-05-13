@@ -10,6 +10,7 @@ namespace ArtistCollection.Models
 {
     public class Artist_Song_Collection
     {
+        
         [Required(ErrorMessage = "Artist Id is required.")]
         public int ArtistID { get; set; }
 
