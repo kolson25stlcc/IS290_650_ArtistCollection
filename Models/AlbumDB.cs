@@ -179,7 +179,7 @@ namespace ArtistCollection.Models
 
         }
 
-        public static bool DeleteAlbum(int album_id)
+        public static bool DeleteAlbum(Album ObjModel)
         {
             string connString = GetConnectionString();
             String sql = string.Empty;
@@ -196,7 +196,7 @@ namespace ArtistCollection.Models
                           "where album_id = @album_id ";
                     using (cmd = new SqlCommand(sql, db))
                     {
-                        cmd.Parameters.AddWithValue("@album_id", album_id);
+                        cmd.Parameters.AddWithValue("@album_id", ObjModel.AlbumID);
                         rowsAffected = cmd.ExecuteNonQuery();
                     }
                     if (rowsAffected >= 1)

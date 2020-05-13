@@ -63,7 +63,7 @@
                     <td>
                         @Html.ActionLink("Edit", "Edit", new { album_id = item.AlbumID }) |
                         @Html.ActionLink("Detail", "Detail", new { album_id = item.AlbumID }) |
-                        @Html.ActionLink("Delete", "Delete", new { album_id = item.AlbumID }, new { onclick = "return confirm('Are sure wants to delete?');" })
+                        @Html.ActionLink("Delete", "Delete", new { album_id = item.AlbumID } @*new { onclick = "return confirm('Are sure wants to delete?');" }*@)
 
                         @*@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
                             @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
