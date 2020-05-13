@@ -120,15 +120,14 @@ namespace ArtistCollection.Controllers
         }
 
         // 4. ************* DELETE NAME DETAILS ******************
-        // GET: Name/Delete/5
-        public IActionResult Delete(int album_id)
+        // GET: Name/Delete/
+        public IActionResult ShowDelete(int album_id)
         {
             Album objTest = new Album();
             objTest = AlbumDB.GetAlbum(album_id);
             return View(objTest);
 
         }
-        [HttpPost]
         public IActionResult Delete(int album_id, Album objTemp)
         {
             try

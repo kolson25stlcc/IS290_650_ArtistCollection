@@ -1,8 +1,7 @@
-﻿
-@model ArtistCollection.Models.Album
+﻿@model ArtistCollection.Models.Album
 
 @{
-    ViewData["Title"] = "Delete";
+    ViewData["Title"] = "SHowDelete";
 }
 
 <!DOCTYPE html>
@@ -10,7 +9,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Delete</title>
+    <title>Detail</title>
 </head>
 <body>
 
@@ -45,8 +44,9 @@
         </dl>
     </div>
     <div>
-        @Html.ActionLink("Delete", "Delete", new { AlbumID = Model.AlbumID }, new { onclick = "return confirm('Are sure wants to delete?');"})
+        @Html.ActionLink("Delete", "Delete", new { AlbumID = Model.AlbumID }) |
         <a asp-action="Index">Back to List</a>
     </div>
 </body>
 </html>
+
