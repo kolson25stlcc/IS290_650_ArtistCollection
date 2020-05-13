@@ -38,7 +38,7 @@ namespace ArtistCollection.Models
         public string Occupation { get; set; }
 
         [Column(TypeName = "decimal(10,2)")]
-        public decimal? NetWorth { get; set; }
+        public decimal NetWorth { get; set; }
 
         [AllowNull]
         public string Hometown { get; set; }

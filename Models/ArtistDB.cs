@@ -37,14 +37,14 @@ namespace ArtistCollection.Models
                             while (dr.Read())
                             {
                                 Artist objTmp = new Artist();
-                                objTmp.ArtistID = Convert.ToInt16(dr["artist_id"]);
+                                objTmp.ArtistID = Convert.ToInt16(dr["artist_id"].ToString());
                                 objTmp.ArtistFirstName = dr["first_name"].ToString();
                                 objTmp.ArtistLastName = dr["last_name"].ToString();
                                 objTmp.YearBorn = Convert.ToInt16(dr["year_born"].ToString());
                                 objTmp.YearBorn = Convert.ToInt16(dr["year_died"].ToString());
                                 objTmp.YearsActive = Convert.ToInt16(dr["years_active"].ToString());
                                 objTmp.Occupation = dr["occupation"].ToString();
-                                objTmp.NetWorth = Convert.ToDecimal(dr["net_worth"]);
+                                objTmp.NetWorth = Convert.ToDecimal(dr["net_worth"].ToString());
                                 objTmp.Hometown = dr["home_town"].ToString();
                                 objTmp.Genre = dr["genre"].ToString();
                                 objTmp.Awards = dr["awards"].ToString();
@@ -89,14 +89,14 @@ namespace ArtistCollection.Models
                             while (dr.Read())
                             {
                                 objTemp = new Artist();
-                                objTemp.ArtistID = Convert.ToInt16(dr["artist_id"]);
+                                objTemp.ArtistID = Convert.ToInt16(dr["artist_id"].ToString());
                                 objTemp.ArtistFirstName = dr["first_name"].ToString();
                                 objTemp.ArtistLastName = dr["last_name"].ToString();
                                 objTemp.YearBorn = Convert.ToInt16(dr["year_born"].ToString());
                                 objTemp.YearBorn = Convert.ToInt16(dr["year_died"].ToString());
                                 objTemp.YearsActive = Convert.ToInt16(dr["years_active"].ToString());
                                 objTemp.Occupation = dr["occupation"].ToString();
-                                objTemp.NetWorth = Convert.ToDecimal(dr["net_worth"]);
+                                objTemp.NetWorth = Convert.ToDecimal(dr["net_worth"].ToString());
                                 objTemp.Hometown = dr["home_town"].ToString();
                                 objTemp.Genre = dr["genre"].ToString();
                                 objTemp.Awards = dr["awards"].ToString();
@@ -137,15 +137,15 @@ namespace ArtistCollection.Models
                         cmd.Parameters.AddWithValue("@last_name", objModel.ArtistLastName);
                         cmd.Parameters.AddWithValue("@year_born", objModel.YearBorn);
                         cmd.Parameters.AddWithValue("@year_died", objModel.YearDied);
-                        cmd.Parameters.AddWithValue("@year_active", objModel.YearsActive);
-                        cmd.Parameters.AddWithValue("@occupation", objModel.Occupation);
+                        cmd.Parameters.AddWithValue("@years_active", objModel.YearsActive);
+                        cmd.Parameters.AddWithValue("@occupation", objModel.Occupation ?? Convert.DBNull);
                         cmd.Parameters.AddWithValue("@net_worth", objModel.NetWorth);
-                        cmd.Parameters.AddWithValue("@home_town", objModel.Hometown);
+                        cmd.Parameters.AddWithValue("@home_town", objModel.Hometown ?? Convert.DBNull);
                         cmd.Parameters.AddWithValue("@genre", objModel.Genre);
-                        cmd.Parameters.AddWithValue("@awards", objModel.Awards);
-                        cmd.Parameters.AddWithValue("@instruments", objModel.Instruments);
-                        cmd.Parameters.AddWithValue("@label", objModel.Label);
-                        cmd.Parameters.AddWithValue("@photo", objModel.Photo);
+                        cmd.Parameters.AddWithValue("@awards", objModel.Awards ?? Convert.DBNull);
+                        cmd.Parameters.AddWithValue("@instruments", objModel.Instruments ?? Convert.DBNull);
+                        cmd.Parameters.AddWithValue("@label", objModel.Label ?? Convert.DBNull);
+                        cmd.Parameters.AddWithValue("@photo", objModel.Photo ?? Convert.DBNull);
                         rowsAffected = cmd.ExecuteNonQuery();
                     }
                     if (rowsAffected >= 1)
@@ -201,14 +201,14 @@ namespace ArtistCollection.Models
                         cmd.Parameters.AddWithValue("@year_born", objModel.YearBorn);
                         cmd.Parameters.AddWithValue("@year_died", objModel.YearDied);
                         cmd.Parameters.AddWithValue("@year_active", objModel.YearsActive);
-                        cmd.Parameters.AddWithValue("@occupation", objModel.Occupation);
+                        cmd.Parameters.AddWithValue("@occupation", objModel.Occupation ?? Convert.DBNull);
                         cmd.Parameters.AddWithValue("@net_worth", objModel.NetWorth);
-                        cmd.Parameters.AddWithValue("@home_town", objModel.Hometown);
+                        cmd.Parameters.AddWithValue("@home_town", objModel.Hometown ?? Convert.DBNull);
                         cmd.Parameters.AddWithValue("@genre", objModel.Genre);
-                        cmd.Parameters.AddWithValue("@awards", objModel.Awards);
-                        cmd.Parameters.AddWithValue("@instruments", objModel.Instruments);
-                        cmd.Parameters.AddWithValue("@label", objModel.Label);
-                        cmd.Parameters.AddWithValue("@photo", objModel.Photo);
+                        cmd.Parameters.AddWithValue("@awards", objModel.Awards ?? Convert.DBNull);
+                        cmd.Parameters.AddWithValue("@instruments", objModel.Instruments ?? Convert.DBNull);
+                        cmd.Parameters.AddWithValue("@label", objModel.Label ?? Convert.DBNull);
+                        cmd.Parameters.AddWithValue("@photo", objModel.Photo ?? Convert.DBNull);
 
                         rowsAffected = cmd.ExecuteNonQuery();
                     }
