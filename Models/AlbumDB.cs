@@ -157,7 +157,7 @@ namespace ArtistCollection.Models
                     {
                         cmd.Parameters.AddWithValue("@ablum_name", objModel.AlbumName);
                         cmd.Parameters.AddWithValue("@year", objModel.Year);
-                        cmd.Parameters.AddWithValue("@genre", objModel.Genre ?? Convert.DBNull);
+                        cmd.Parameters.AddWithValue("@genre", objModel.Genre);
                         cmd.Parameters.AddWithValue("@album_id", objModel.AlbumID);
 
                         rowsAffected = cmd.ExecuteNonQuery();
