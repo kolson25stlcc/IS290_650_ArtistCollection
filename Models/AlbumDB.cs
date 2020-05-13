@@ -151,12 +151,12 @@ namespace ArtistCollection.Models
                     sql = "UPDATE Album " + Environment.NewLine +
                           "set album_name = @album_name " + Environment.NewLine + "," +
                           "     year =  @year " + Environment.NewLine + "," +
-                          "     genre = @genre  " + Environment.NewLine + 
+                          "     genre = @genre  " + Environment.NewLine +
                           "where album_id = @album_id ";
                     using (cmd = new SqlCommand(sql, db))
                     {
                         cmd.Parameters.AddWithValue("@album_name", objModel.AlbumName);
-                        cmd.Parameters.AddWithValue("@year", objModel.Year );
+                        cmd.Parameters.AddWithValue("@year", objModel.Year);
                         cmd.Parameters.AddWithValue("@genre", objModel.Genre ?? Convert.DBNull);
                         cmd.Parameters.AddWithValue("@album_id", objModel.AlbumID);
 
